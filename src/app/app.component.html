@@ -1,4 +1,10 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<input [(ngModel)]="imageLink" />
+<button (click)="addImageLink()">Add Image</button>
+<br />
+<br />
+<br />
+<div *ngFor="let image of images">
+  <img width="100%" class="image" [src]="image" (click)="delimg(image)" />
+ 
+</div>
